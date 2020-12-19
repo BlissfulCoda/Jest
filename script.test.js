@@ -1,5 +1,10 @@
 const googleSearch = require('./script')
 
+
+dbMock = [
+
+]
 it('this is a test', () => {
-    console.log(googleSearch)
+    // googleSearch('testtest', dbMock)
+    expect('hello').toBe('hello')
 })

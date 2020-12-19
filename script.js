@@ -6,13 +6,13 @@ const googleDatase = [
     'prestzels.com'
 ]
 
-const googleSearch = searchInput => {
-    const matches = googleDatase.filter(website => {
+const googleSearch = (searchInput, db) => {
+    const matches = db.filter(website => {
         return website.includes(searchInput);
     })
     return matches.length > 2 ? matches.slice(0, 2) : matches;
 }
 
-// console.log(googleSearch('flower'))
+// console.log(googleSearch('flower', googleDatabase))
 
 module.exports = googleSearch;
