@@ -32,9 +32,10 @@ it('getPeople returns counts and results', () => {
     }))
 
     //always use expect.assertions to make sure the assertions are being called
-    expect.assertions(1)
+    expect.assertions(2)
     return swapi.getPeoplePromise(mockFetch).then(data => {
         expect(mockFetch.mock.calls.length).toBe(1)
+        expect(mockFetch).toBeCalledWith('https://swapi.py4e.com/api/people');
     })
 })
 
