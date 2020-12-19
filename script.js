@@ -13,4 +13,6 @@ const googleSearch = searchInput => {
     return matches.length > 2 ? matches.slice(0, 2) : matches;
 }
 
-console.log(googleSearch('flower'))
+// console.log(googleSearch('flower'))
+
+module.exports = googleSearch;
